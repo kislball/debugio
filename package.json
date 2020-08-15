@@ -1,6 +1,6 @@
 {
   "name": "debugio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An easy to use logging library",
   "main": "./dist/src/index.js",
   "types": "./types/index.d.ts",
@@ -20,5 +20,9 @@
   "dependencies": {
     "@types/node": "^14.0.27",
     "handlebars": "^4.7.6"
-  }
+  },
+  "files": [
+    "dist",
+    "types"
+  ]
 }
