@@ -24,5 +24,11 @@
   "files": [
     "dist",
     "types"
-  ]
+  ],
+  "homepage": "https://github.com/kislball/debugio#readme",
+  "bugs": "https://github.com/kislball/debugio/issues",
+  "repository": {
+    "url": "https://github.com/kislball/debugio",
+    "type": "github"
+  }
 }
