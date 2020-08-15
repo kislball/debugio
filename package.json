@@ -1,0 +1,24 @@
+{
+  "name": "debugio",
+  "version": "1.0.0",
+  "description": "An easy to use logging library",
+  "main": "./dist/src/index.js",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "prepublish": "tsc"
+  },
+  "keywords": [
+    "logging",
+    "debug"
+  ],
+  "author": "KislBall",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@types/node": "^14.0.27",
+    "handlebars": "^4.7.6"
+  }
+}
