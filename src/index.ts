@@ -115,16 +115,19 @@ class DebugIO extends EventEmitter {
     }
   }
 
+  private _invoke(logType: LogType, ...messages: any[]) {
+    for(const reciver of this.recivers) {
+      reciver(logType, messages.join(DebugIO.separator), messages, this._pretty(logType, messages.join(DebugIO.separator)));
+    }
+  }
+
   /**
    * post a log
    * 
    * @param messages data to log
    */
   log(...messages: any[]): void {
-    for(const reciver of this.recivers) {
-      reciver('log', messages.join(DebugIO.separator), messages, this._pretty('log', messages.join(DebugIO.separator)));
-    }
-    this.emit('log', messages.join(DebugIO.separator), messages);
+    this._invoke('log', messages);
   }
 
   /**
@@ -133,10 +136,7 @@ class DebugIO extends EventEmitter {
    * @param messages errors
    */
   error(...messages: any[]): void {
-    for(const reciver of this.recivers) {
-      reciver('error', messages.join(DebugIO.separator), messages, this._pretty('error', messages.join(DebugIO.separator)));
-    }
-    this.emit('errorLog', messages.join(DebugIO.separator), messages);
+    this._invoke('error', messages);
   }
 
   /**
@@ -145,10 +145,7 @@ class DebugIO extends EventEmitter {
    * @param messages warn
    */
   warn(...messages: any[]): void {
-    for(const reciver of this.recivers) {
-      reciver('warn', messages.join(DebugIO.separator), messages, this._pretty('warn', messages.join(DebugIO.separator)));
-    }
-    this.emit('warnLog', messages.join(DebugIO.separator), messages);
+    this._invoke('warn', messages);
   }
 
   /**
