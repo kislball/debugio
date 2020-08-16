@@ -23,6 +23,7 @@ declare interface DebugIO {
 class DebugIO extends EventEmitter {
   /**
    * options
+   * @type {IOptions}
    */
   public readonly options: IOptions;
   /**
@@ -31,14 +32,17 @@ class DebugIO extends EventEmitter {
   public namespace: string;
   /**
    * children of the instance
+   * @type {DebugIO[]}
    */
   public children: DebugIO[] = [];
   /**
    * parents of the instance
+   * @type {DebugIO[]}
    */
   public parents: DebugIO[] = [];
   /**
    * recivers of the instance
+   * @type {LogReciver[]}
    */
   public recivers: LogReciver[] = [];
 
@@ -48,6 +52,7 @@ class DebugIO extends EventEmitter {
   public static prefix: string = "";
   /**
    * placeholders of the instance
+   * @type {IPlaceholders}
    */
   public static placeholders: IPlaceholders = {
     main: "{{ prefix }}{{ namespaces }}{{ logType }} {{ pretty }}",
@@ -60,6 +65,7 @@ class DebugIO extends EventEmitter {
   public static separator: string = ", ";
   /**
    * render functions
+   * @type {TemplateEngine}
    */
   public static render: TemplateEngine = template;
 
@@ -74,7 +80,7 @@ class DebugIO extends EventEmitter {
 
   /**
    * 
-   * @param options - options
+   * @param options {IOptions} options
    */
   constructor(options: IOptions) {
     super();

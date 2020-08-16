@@ -13,6 +13,7 @@ declare interface DebugIO {
 declare class DebugIO extends EventEmitter {
     /**
      * options
+     * @type {IOptions}
      */
     readonly options: IOptions;
     /**
@@ -21,14 +22,17 @@ declare class DebugIO extends EventEmitter {
     namespace: string;
     /**
      * children of the instance
+     * @type {DebugIO[]}
      */
     children: DebugIO[];
     /**
      * parents of the instance
+     * @type {DebugIO[]}
      */
     parents: DebugIO[];
     /**
      * recivers of the instance
+     * @type {LogReciver[]}
      */
     recivers: LogReciver[];
     /**
@@ -37,6 +41,7 @@ declare class DebugIO extends EventEmitter {
     static prefix: string;
     /**
      * placeholders of the instance
+     * @type {IPlaceholders}
      */
     static placeholders: IPlaceholders;
     /**
@@ -45,6 +50,7 @@ declare class DebugIO extends EventEmitter {
     static separator: string;
     /**
      * render functions
+     * @type {TemplateEngine}
      */
     static render: TemplateEngine;
     /**
@@ -56,23 +62,23 @@ declare class DebugIO extends EventEmitter {
     private static _createdNamespaces;
     /**
      *
-     * @param options - options
+     * @param options {IOptions} options
      */
     constructor(options: IOptions);
     /**
-     * log data
+     * post a log
      *
      * @param messages data to log
      */
     log(...messages: any[]): void;
     /**
-     * output error
+     * post an error
      *
      * @param messages errors
      */
     error(...messages: any[]): void;
     /**
-     * output a warning
+     * post a warning
      *
      * @param messages warn
      */
