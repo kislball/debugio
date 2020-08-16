@@ -14,7 +14,7 @@
 
 Ƭ **LogReciver**: *function*
 
-*Defined in [src/types/LogReciver.ts:3](https://github.com/kislball/debugio/blob/e6c0d0f/src/types/LogReciver.ts#L3)*
+*Defined in [types/LogReciver.ts:3](https://github.com/kislball/debugio/blob/264cb0b/src/types/LogReciver.ts#L3)*
 
 #### Type declaration:
 

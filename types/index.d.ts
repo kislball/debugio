@@ -1,16 +1,9 @@
-/// <reference types="node" />
-import { EventEmitter } from 'events';
-import { IDebugIOEvents } from './types/IDebugIOEvents';
 import { IOptions } from './types/IOptions';
 import LogReciver from './types/LogReciver';
 import { IPlaceholders } from './types/IPlaceholders';
 import TemplateEngine from './types/TemplateEngine';
 import LogType from './types/LogType';
-declare interface DebugIO {
-    on<U extends keyof IDebugIOEvents>(event: U, listener: IDebugIOEvents[U]): this;
-    emit<U extends keyof IDebugIOEvents>(event: U, ...args: Parameters<IDebugIOEvents[U]>): boolean;
-}
-declare class DebugIO extends EventEmitter {
+declare class DebugIO {
     /**
      * options
      * @type {IOptions}
@@ -65,6 +58,7 @@ declare class DebugIO extends EventEmitter {
      * @param options {IOptions} options
      */
     constructor(options: IOptions);
+    private _invoke;
     /**
      * post a log
      *

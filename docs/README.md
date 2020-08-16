@@ -10,7 +10,7 @@
 > Enjoy simplicity and flexibility
 
 DebugIO is super simple. It is built on principle of recivers, who do all the stuff about sending logs somewhere.  
-DebugIO is super lightweight. It is just 239 lines of code and single dependency - handlebars
+DebugIO is super lightweight. It is just 227 lines of code.
 ## Getting started
 ### Simple logging
 Let's start with a simple console logging:
@@ -83,6 +83,9 @@ export = template;
 ### Other options
 * `DebugIO.separator` - string, which messages are joined
 * `DebugIO.prefix` - `prefix` variable in `main` placeholder
+
+## API
+Read about API here: https://github.com/kislball/debugio/blob/master/docs/globals.md
 
 ## License
 MIT
