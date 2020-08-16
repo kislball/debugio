@@ -6,3 +6,5 @@
 ### 1.1.1
 * updated readme
 * added npm script for lines calculation
+### 1.1.2
+* updated readme
