@@ -29,7 +29,7 @@ const Console = (logType, message, messages, pretty) => {
   console[logType](pretty);
 };
 ```
-We can bind them to `DebugIO` instance using `DebugIO.use()`(like in [the beginning](#simple-logging)).
+We can bind them to `DebugIO` instance using `DebugIO.use()`(like in [the beginning](#simple-logging)) or passing them as `recivers` array in options
 ### Inheritance
 Second awesome part is instance inheritance. For example:
 ```js
