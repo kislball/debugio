@@ -80,8 +80,8 @@ class DebugIO extends EventEmitter {
    */
   constructor(options: IOptions) {
     super();
-    if(!options.namespace) throw new DebugIOError("no namespace provided");
-    if(DebugIO._createdNamespaces.includes(options.namespace)) throw new DebugIOError(`namespace ${options.namespace} has been already declared`);
+    if(!options.namespace) throw new TypeError("no namespace provided");
+    if(DebugIO._createdNamespaces.includes(options.namespace)) throw new RangeError(`namespace ${options.namespace} has been already declared`);
     this.options = options;
     this.namespace = options.namespace;
 
