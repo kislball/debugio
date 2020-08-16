@@ -99,6 +99,14 @@ class DebugIO extends EventEmitter {
         this.recivers.push(reciver);
       }
     }
+
+    if(this.options.invokeParentRecivers == true) {
+      for(const parent of this.parents) {
+        for(const parentReciver of parent.recivers) {
+          this.recivers.push(parentReciver);
+        }
+      }
+    }
   }
 
   /**

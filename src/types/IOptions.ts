@@ -4,5 +4,6 @@ import LogReciver = require("./LogReciver");
 export interface IOptions {
   parent?: DebugIO,
   namespace: string,
-  recivers?: LogReciver[]
+  recivers?: LogReciver[],
+  invokeParentRecivers?: boolean
 }
