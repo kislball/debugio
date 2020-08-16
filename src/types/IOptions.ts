@@ -17,5 +17,9 @@ export interface IOptions {
   /**
    * invoke parent recivers
    */
-  invokeParentRecivers?: boolean
+  invokeParentRecivers?: boolean,
+  /**
+   * custom context, that you can use in placeholders
+   */
+  customContext?: object
 }

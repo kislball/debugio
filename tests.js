@@ -25,3 +25,16 @@ let test3 = new DebugIO({
 });
 
 test3.log("parent invoking stuff"); // should log [main][test2][test3][log] parent invoking stuff twice
+
+// custom context testing
+let test4 = new DebugIO({
+  namespace: "test4",
+  customContext: {
+    test: "it works"
+  }
+});
+let def = DebugIO.placeholders.main;
+DebugIO.placeholders.main = "[{{test}}] {{pretty}}";
+test4.use(DebugIO.recivers.Console);
+test4.log("test"); // [it works] test
+DebugIO.placeholders.main = def;

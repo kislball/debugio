@@ -175,7 +175,7 @@ class DebugIO extends EventEmitter {
     const namespaces: string = namespaceNames.map(e => DebugIO.render(DebugIO.placeholders.namespace, {namespace: e})).join("");
     final.namespaces = namespaces;
 
-    return DebugIO.render(DebugIO.placeholders.main, final);
+    return DebugIO.render(DebugIO.placeholders.main, Object.assign(final, this.options.customContext ?? {}));
   }
 }
 
