@@ -1,4 +1,3 @@
-import { EventEmitter } from 'events'
 import { IDebugIOEvents } from './types/IDebugIOEvents'
 import { IOptions } from './types/IOptions'
 import LogReciver from './types/LogReciver'
@@ -9,18 +8,7 @@ import TemplateEngine from './types/TemplateEngine';
 import LogType from './types/LogType';
 import Console from './recivers/Console'
 
-// https://stackoverflow.com/a/61609010
-declare interface DebugIO {
-  on<U extends keyof  IDebugIOEvents>(
-    event: U, listener:  IDebugIOEvents[U]
-  ): this;
-
-  emit<U extends keyof IDebugIOEvents>(
-    event: U, ...args: Parameters< IDebugIOEvents[U]>
-  ): boolean;
-}
-
-class DebugIO extends EventEmitter {
+class DebugIO {
   /**
    * options
    * @type {IOptions}
@@ -83,7 +71,6 @@ class DebugIO extends EventEmitter {
    * @param options {IOptions} options
    */
   constructor(options: IOptions) {
-    super();
     if(!options.namespace) throw new TypeError("no namespace provided");
     if(DebugIO._createdNamespaces.includes(options.namespace)) throw new RangeError(`namespace ${options.namespace} has been already declared`);
     this.options = options;
