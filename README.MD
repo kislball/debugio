@@ -1,4 +1,8 @@
 # DebugIO
+![](https://img.shields.io/github/issues/kislball/debugio)
+![](https://img.shields.io/github/forks/kislball/debugio)
+![](https://img.shields.io/github/forks/kislball/debugio)
+[![NPM](https://nodei.co/npm/debugio.png)](https://nodei.co/npm/debugio/)
 > Enjoy simplicity and flexibility
 
 DebugIO is super simple. It is built on principle of recivers, who do all the stuff about sending logs somewhere.  
