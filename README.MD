@@ -80,5 +80,8 @@ export = template;
 * `DebugIO.separator` - string, which messages are joined
 * `DebugIO.prefix` - `prefix` variable in `main` placeholder
 
+## API
+Read about API here: https://github.com/kislball/debugio/blob/master/docs/globals.md
+
 ## License
 MIT
