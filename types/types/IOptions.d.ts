@@ -4,4 +4,5 @@ export interface IOptions {
     parent?: DebugIO;
     namespace: string;
     recivers?: LogReciver[];
+    invokeParentRecivers?: boolean;
 }
