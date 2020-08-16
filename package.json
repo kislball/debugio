@@ -1,6 +1,6 @@
 {
   "name": "debugio",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "An easy to use logging library",
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",
@@ -35,5 +35,8 @@
   "repository": {
     "url": "https://github.com/kislball/debugio",
     "type": "github"
+  },
+  "engines": {
+    "node": ">=6.0.0"
   }
 }

@@ -3,6 +3,8 @@
 * New options: `customContext`
 * Internal refactoring.
 * **DebugIO is not extending EventEmitter in favour of recivers**
+### 1.2.1
+* engines in package.json update
 ## 1.1.0
 * New option: `invokeParentRecivers`
 * Using built-in errors instead of DebugIOError
