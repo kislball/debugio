@@ -6,7 +6,8 @@
   "types": "./types/index.d.ts",
   "scripts": {
     "prepublish": "tsc",
-    "docs": "typedoc --out docs src"
+    "docs": "typedoc --out docs src",
+    "test": "node tests.js"
   },
   "keywords": [
     "logging",
