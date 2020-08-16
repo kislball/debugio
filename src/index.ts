@@ -7,8 +7,6 @@ import { IPrettyContext } from './types/IPrettyContext';
 import template from './template'
 import TemplateEngine from './types/TemplateEngine';
 import LogType from './types/LogType';
-import { DebugIOError } from './error';
-
 import Console from './recivers/Console'
 
 // https://stackoverflow.com/a/61609010
