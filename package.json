@@ -5,7 +5,8 @@
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",
   "scripts": {
-    "prepublish": "tsc"
+    "prepublish": "tsc",
+    "docs": "typedoc --out docs src"
   },
   "keywords": [
     "logging",
@@ -15,6 +16,7 @@
   "license": "MIT",
   "devDependencies": {
     "eslint": "^7.7.0",
+    "typedoc": "^0.18.0",
     "typescript": "^3.9.7"
   },
   "dependencies": {

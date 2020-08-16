@@ -1,0 +1,230 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>debugio</title>
+	<meta name="description" content="Documentation for debugio">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">debugio</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>debugio</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#debugio" id="debugio" style="color: inherit; text-decoration: none;">
+					<h1>DebugIO</h1>
+				</a>
+				<blockquote>
+					<p>Enjoy simplicity and flexibility</p>
+				</blockquote>
+				<p>DebugIO is super simple. It is built on principle of recivers, who do all the stuff about sending logs somewhere.<br>DebugIO is super lightweight. It is just 142 lines of code and single dependency - handlebars</p>
+				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
+					<h2>Getting started</h2>
+				</a>
+				<a href="#simple-logging" id="simple-logging" style="color: inherit; text-decoration: none;">
+					<h3>Simple logging</h3>
+				</a>
+				<p>Let&#39;s start with a simple console logging:</p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> DebugIO = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;debugio&quot;</span>);
+<span class="hljs-keyword">const</span> logger = <span class="hljs-keyword">new</span> DebugIO({
+  <span class="hljs-attr">namespace</span>: <span class="hljs-string">&quot;example&quot;</span> <span class="hljs-comment">// namespace of the logger, it has to be unique</span>
+});
+logger.use(DebugIO.recivers.Console); <span class="hljs-comment">// let&#x27;s use default console logger</span>
+logger.log(<span class="hljs-string">&quot;hello world!&quot;</span>); <span class="hljs-comment">// yay! it logs [example][log] hello world! </span>
+logger.error(<span class="hljs-string">&quot;some error&quot;</span>); <span class="hljs-comment">// oh... there is an error</span>
+logger.warn(<span class="hljs-string">&quot;wash your hands&quot;</span>); <span class="hljs-comment">// and stay home as well</span></code></pre>
+				<a href="#recivers" id="recivers" style="color: inherit; text-decoration: none;">
+					<h3>Recivers</h3>
+				</a>
+				<p>Recivers are special functions, which handle logs. They accept following parameters:</p>
+				<ul>
+					<li>logType: &#39;warn&#39; | &#39;log&#39; | &#39;error&#39; - type of log</li>
+					<li>message: any - concatenated message</li>
+					<li>messages: any[] - splitted message</li>
+					<li>pretty: string - prettified message with <code>main</code> placeholder(check <a href="#placeholders">placeholders</a>)  </li>
+				</ul>
+				<p>Here is an example of default <code>Console</code> reciver(ts syntax omitted):</p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> Console = <span class="hljs-function">(<span class="hljs-params">logType, message, messages, pretty</span>) =&gt;</span> {
+  <span class="hljs-built_in">console</span>[logType](pretty);
+};</code></pre>
+				<p>We can bind them to <code>DebugIO</code> instance using <code>DebugIO.use()</code>(like in <a href="#simple-logging">the beginning</a>) or passing them as <code>recivers</code> array in options</p>
+				<a href="#inheritance" id="inheritance" style="color: inherit; text-decoration: none;">
+					<h3>Inheritance</h3>
+				</a>
+				<p>Second awesome part is instance inheritance. For example:</p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> test = <span class="hljs-keyword">new</span> DebugIO({
+  <span class="hljs-attr">namespace</span>: <span class="hljs-string">&quot;test&quot;</span>
+});
+
+<span class="hljs-keyword">const</span> test2 = <span class="hljs-keyword">new</span> DebugIO({
+  <span class="hljs-attr">namespace</span>: <span class="hljs-string">&quot;test2&quot;</span>,
+  <span class="hljs-attr">parent</span>: test
+});
+test2.use(DebugIO.recivers.Console);
+
+test2.log(<span class="hljs-string">&quot;inheritance test&quot;</span>); <span class="hljs-comment">// [test][test2][log] inheritance test</span></code></pre>
+				<p>As you see, we can add &quot;sub-namespace&quot; to existing namespace.</p>
+				<a href="#flexing-the-debugio" id="flexing-the-debugio" style="color: inherit; text-decoration: none;">
+					<h2>Flexing the DebugIO</h2>
+				</a>
+				<p>All possible options can be set up as static properties in <code>DebugIO</code> class.</p>
+				<a href="#placeholders" id="placeholders" style="color: inherit; text-decoration: none;">
+					<h3>Placeholders</h3>
+				</a>
+				<p>In case you don&#39;t like standart way of prettifying strings, you can provide custom placeholders in <code>DebugIO.placeholders</code> field.<br>All place holders support the power of Handlebars</p>
+				<ul>
+					<li><code>DebugIO.placeholders.namespace</code> - default value is <code>[{{namespace}}]. </code> Used in prettifying namespaces. Available variables: <code>namespace</code></li>
+					<li><code>DebugIO.placeholders.logType</code> - default value is <code>[{{rawLogType}}]. </code> Used in prettifying log names. Available variables: <code>rawLogType</code>. Created for customizing log types</li>
+					<li><code>DebugIO.placeholders.main</code> - default value is <code>{{ prefix }}{{ namespaces }}{{ logType }} {{ pretty }}</code>. Builds everything into one piece.<br>Variables:<ul>
+							<li>prefix - prefix you provided in DebugIO.prefix</li>
+							<li>namespaces - namespaces chain built from <code>namespace</code> placeholder</li>
+							<li>logType - logType from <code>logType</code> placeholder</li>
+							<li>pretty - messages put into function joined by <code>DebugIO.separator</code></li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#providing-custom-template-enigne" id="providing-custom-template-enigne" style="color: inherit; text-decoration: none;">
+					<h3>Providing custom template enigne</h3>
+				</a>
+				<p>You can use your own template engine by providing <code>DebugIO.render</code> function. It&#39;ll accept those params: <code>str</code> - string to render; <code>ctx</code> - data to render. Default function:</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> Handlebars <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;handlebars&#x27;</span>
+<span class="hljs-keyword">import</span> TemplateEngine = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./types/TemplateEngine&#x27;</span>);
+
+<span class="hljs-keyword">const</span> template: TemplateEngine = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">str: <span class="hljs-built_in">string</span>, context: <span class="hljs-built_in">object</span></span>): <span class="hljs-title">string</span> </span>{
+  <span class="hljs-keyword">return</span> Handlebars.compile(str)(context);
+}
+
+<span class="hljs-keyword">export</span> = template;</code></pre>
+				<a href="#other-options" id="other-options" style="color: inherit; text-decoration: none;">
+					<h3>Other options</h3>
+				</a>
+				<ul>
+					<li><code>DebugIO.separator</code> - string, which messages are joined</li>
+					<li><code>DebugIO.prefix</code> - <code>prefix</code> variable in <code>main</code> placeholder</li>
+				</ul>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p>MIT</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_index_.html">&quot;index&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_template_.html">&quot;template&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_types_idebugioevents_.html">&quot;types/IDebugIOEvents&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_types_ioptions_.html">&quot;types/IOptions&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_types_iplaceholders_.html">&quot;types/IPlaceholders&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_types_iprettycontext_.html">&quot;types/IPretty<wbr>Context&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_types_logreciver_.html">&quot;types/<wbr>Log<wbr>Reciver&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_types_logtype_.html">&quot;types/<wbr>Log<wbr>Type&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_types_templateengine_.html">&quot;types/<wbr>Template<wbr>Engine&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
