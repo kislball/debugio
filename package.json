@@ -7,7 +7,8 @@
   "scripts": {
     "prepublish": "tsc",
     "docs": "typedoc --out docs src",
-    "test": "node tests.js"
+    "test": "node tests.js",
+    "lines": "wc -l src/index.ts src/template.ts src/types/* src/recivers/*"
   },
   "keywords": [
     "logging",

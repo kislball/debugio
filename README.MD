@@ -2,7 +2,7 @@
 > Enjoy simplicity and flexibility
 
 DebugIO is super simple. It is built on principle of recivers, who do all the stuff about sending logs somewhere.  
-DebugIO is super lightweight. It is just 142 lines of code and single dependency - handlebars
+DebugIO is super lightweight. It is just 239 lines of code and single dependency - handlebars
 ## Getting started
 ### Simple logging
 Let's start with a simple console logging:
