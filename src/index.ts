@@ -110,7 +110,7 @@ class DebugIO extends EventEmitter {
   }
 
   /**
-   * log data
+   * post a log
    * 
    * @param messages data to log
    */
@@ -122,7 +122,7 @@ class DebugIO extends EventEmitter {
   }
 
   /**
-   * output error
+   * post an error
    * 
    * @param messages errors
    */
@@ -134,7 +134,7 @@ class DebugIO extends EventEmitter {
   }
 
   /**
-   * output a warning
+   * post a warning
    * 
    * @param messages warn
    */
