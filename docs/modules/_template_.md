@@ -18,7 +18,7 @@
 
 • **TemplateEngine**: *any*
 
-*Defined in [template.ts:2](https://github.com/kislball/debugio/blob/264cb0b/src/template.ts#L2)*
+*Defined in [template.ts:2](https://github.com/kislball/debugio/blob/4e218af/src/template.ts#L2)*
 
 ## Functions
 
@@ -26,7 +26,7 @@
 
 ▸ **template**(`str`: string, `context`: object): *string*
 
-*Defined in [template.ts:9](https://github.com/kislball/debugio/blob/264cb0b/src/template.ts#L9)*
+*Defined in [template.ts:9](https://github.com/kislball/debugio/blob/4e218af/src/template.ts#L9)*
 
 **Parameters:**
 

@@ -5,7 +5,7 @@
 # DebugIO
 ![](https://img.shields.io/github/issues/kislball/debugio)
 ![](https://img.shields.io/github/forks/kislball/debugio)
-![](https://img.shields.io/github/forks/kislball/debugio)
+![](https://img.shields.io/github/stars/kislball/debugio)  
 [![NPM](https://nodei.co/npm/debugio.png)](https://nodei.co/npm/debugio/)
 > Enjoy simplicity and flexibility
 
@@ -85,7 +85,7 @@ export = template;
 * `DebugIO.prefix` - `prefix` variable in `main` placeholder
 
 ## API
-Read about API [here](https://github.com/kislball/debugio/blob/master/docs/globals.md)
+Read about API here: https://kislball.github.io/debugio/
 
 ## License
 MIT

@@ -20,7 +20,7 @@
 
 • **errorLog**: *function*
 
-*Defined in [types/IDebugIOEvents.ts:3](https://github.com/kislball/debugio/blob/264cb0b/src/types/IDebugIOEvents.ts#L3)*
+*Defined in [types/IDebugIOEvents.ts:3](https://github.com/kislball/debugio/blob/4e218af/src/types/IDebugIOEvents.ts#L3)*
 
 #### Type declaration:
 
@@ -39,7 +39,7 @@ ___
 
 • **log**: *function*
 
-*Defined in [types/IDebugIOEvents.ts:2](https://github.com/kislball/debugio/blob/264cb0b/src/types/IDebugIOEvents.ts#L2)*
+*Defined in [types/IDebugIOEvents.ts:2](https://github.com/kislball/debugio/blob/4e218af/src/types/IDebugIOEvents.ts#L2)*
 
 #### Type declaration:
 
@@ -58,7 +58,7 @@ ___
 
 • **warnLog**: *function*
 
-*Defined in [types/IDebugIOEvents.ts:4](https://github.com/kislball/debugio/blob/264cb0b/src/types/IDebugIOEvents.ts#L4)*
+*Defined in [types/IDebugIOEvents.ts:4](https://github.com/kislball/debugio/blob/4e218af/src/types/IDebugIOEvents.ts#L4)*
 
 #### Type declaration:
 

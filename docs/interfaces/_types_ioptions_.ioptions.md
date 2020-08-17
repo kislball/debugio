@@ -22,7 +22,7 @@
 
 • **customContext**? : *undefined | object*
 
-*Defined in [types/IOptions.ts:24](https://github.com/kislball/debugio/blob/264cb0b/src/types/IOptions.ts#L24)*
+*Defined in [types/IOptions.ts:24](https://github.com/kislball/debugio/blob/4e218af/src/types/IOptions.ts#L24)*
 
 custom context, that you can use in placeholders
 
@@ -32,7 +32,7 @@ ___
 
 • **invokeParentRecivers**? : *undefined | false | true*
 
-*Defined in [types/IOptions.ts:20](https://github.com/kislball/debugio/blob/264cb0b/src/types/IOptions.ts#L20)*
+*Defined in [types/IOptions.ts:20](https://github.com/kislball/debugio/blob/4e218af/src/types/IOptions.ts#L20)*
 
 invoke parent recivers
 
@@ -42,7 +42,7 @@ ___
 
 • **namespace**: *string*
 
-*Defined in [types/IOptions.ts:12](https://github.com/kislball/debugio/blob/264cb0b/src/types/IOptions.ts#L12)*
+*Defined in [types/IOptions.ts:12](https://github.com/kislball/debugio/blob/4e218af/src/types/IOptions.ts#L12)*
 
 namespace
 
@@ -52,7 +52,7 @@ ___
 
 • **parent**? : *[DebugIO](../classes/_index_.debugio.md)*
 
-*Defined in [types/IOptions.ts:8](https://github.com/kislball/debugio/blob/264cb0b/src/types/IOptions.ts#L8)*
+*Defined in [types/IOptions.ts:8](https://github.com/kislball/debugio/blob/4e218af/src/types/IOptions.ts#L8)*
 
 set parent instance
 
@@ -62,6 +62,6 @@ ___
 
 • **recivers**? : *[LogReciver](../modules/_types_ioptions_.md#logreciver)[]*
 
-*Defined in [types/IOptions.ts:16](https://github.com/kislball/debugio/blob/264cb0b/src/types/IOptions.ts#L16)*
+*Defined in [types/IOptions.ts:16](https://github.com/kislball/debugio/blob/4e218af/src/types/IOptions.ts#L16)*
 
 recivers to pass

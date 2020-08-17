@@ -20,7 +20,7 @@
 
 • **logType**: *string*
 
-*Defined in [types/IPlaceholders.ts:3](https://github.com/kislball/debugio/blob/264cb0b/src/types/IPlaceholders.ts#L3)*
+*Defined in [types/IPlaceholders.ts:3](https://github.com/kislball/debugio/blob/4e218af/src/types/IPlaceholders.ts#L3)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **main**: *string*
 
-*Defined in [types/IPlaceholders.ts:4](https://github.com/kislball/debugio/blob/264cb0b/src/types/IPlaceholders.ts#L4)*
+*Defined in [types/IPlaceholders.ts:4](https://github.com/kislball/debugio/blob/4e218af/src/types/IPlaceholders.ts#L4)*
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **namespace**: *string*
 
-*Defined in [types/IPlaceholders.ts:2](https://github.com/kislball/debugio/blob/264cb0b/src/types/IPlaceholders.ts#L2)*
+*Defined in [types/IPlaceholders.ts:2](https://github.com/kislball/debugio/blob/4e218af/src/types/IPlaceholders.ts#L2)*
