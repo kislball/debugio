@@ -53,6 +53,7 @@ declare class DebugIO {
         Console: (logType: LogType, message: any, messages: any[], pretty: string) => void;
     };
     private static _createdNamespaces;
+    private timestamps;
     /**
      *
      * @param options {IOptions} options
@@ -77,6 +78,19 @@ declare class DebugIO {
      * @param messages warn
      */
     warn(...messages: any[]): void;
+    /**
+     * start timestamp
+     *
+     * @param label the name of the time coutner
+     */
+    time(label: string): void;
+    /**
+     * stop timestamp
+     *
+     * @param label the name of the time coutner
+     * @param logType type of the log
+     */
+    timeEnd(label: string, logType?: LogType): void;
     /**
      * use a reciver for the instance
      *

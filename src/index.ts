@@ -65,6 +65,7 @@ class DebugIO {
   };
 
   private static _createdNamespaces: string[] = [];
+  private timestamps: Map<string, Date> = new Map();
 
   /**
    * 
@@ -133,6 +134,27 @@ class DebugIO {
    */
   warn(...messages: any[]): void {
     this._invoke('warn', messages);
+  }
+
+  /**
+   * start timestamp
+   * 
+   * @param label the name of the time coutner
+   */
+  time(label: string): void {
+    this.timestamps.set(label, new Date);
+  }
+
+  /**
+   * stop timestamp
+   * 
+   * @param label the name of the time coutner
+   * @param logType type of the log
+   */
+  timeEnd(label: string, logType: LogType = "log"): void {
+    const time = this.timestamps.get(label);
+    if(time == undefined) throw new TypeError(`cannot find ${label} time counter`);
+    this._invoke(logType, `${label}: ${new Date().getTime() - time.getTime()}ms`);
   }
 
   /**

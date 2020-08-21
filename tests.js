@@ -38,3 +38,13 @@ DebugIO.placeholders.main = "[{{test}}] {{pretty}}";
 test4.use(DebugIO.recivers.Console);
 test4.log("test"); // [it works] test
 DebugIO.placeholders.main = def;
+
+// timestamps
+let test5 = new DebugIO({
+  namespace: "test5"
+});
+test5.use(DebugIO.recivers.Console);
+test5.time("my timestamp");
+setTimeout(() => {
+  test5.timeEnd("my timestamp");
+}, 1000);
