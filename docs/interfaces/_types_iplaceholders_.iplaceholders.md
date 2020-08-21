@@ -13,6 +13,7 @@
 * [logType](_types_iplaceholders_.iplaceholders.md#logtype)
 * [main](_types_iplaceholders_.iplaceholders.md#main)
 * [namespace](_types_iplaceholders_.iplaceholders.md#namespace)
+* [time](_types_iplaceholders_.iplaceholders.md#time)
 
 ## Properties
 
@@ -20,7 +21,7 @@
 
 • **logType**: *string*
 
-*Defined in [types/IPlaceholders.ts:3](https://github.com/kislball/debugio/blob/4e218af/src/types/IPlaceholders.ts#L3)*
+*Defined in [types/IPlaceholders.ts:3](https://github.com/kislball/debugio/blob/ab967a2/src/types/IPlaceholders.ts#L3)*
 
 ___
 
@@ -28,7 +29,7 @@ ___
 
 • **main**: *string*
 
-*Defined in [types/IPlaceholders.ts:4](https://github.com/kislball/debugio/blob/4e218af/src/types/IPlaceholders.ts#L4)*
+*Defined in [types/IPlaceholders.ts:4](https://github.com/kislball/debugio/blob/ab967a2/src/types/IPlaceholders.ts#L4)*
 
 ___
 
@@ -36,4 +37,12 @@ ___
 
 • **namespace**: *string*
 
-*Defined in [types/IPlaceholders.ts:2](https://github.com/kislball/debugio/blob/4e218af/src/types/IPlaceholders.ts#L2)*
+*Defined in [types/IPlaceholders.ts:2](https://github.com/kislball/debugio/blob/ab967a2/src/types/IPlaceholders.ts#L2)*
+
+___
+
+###  time
+
+• **time**: *string*
+
+*Defined in [types/IPlaceholders.ts:5](https://github.com/kislball/debugio/blob/ab967a2/src/types/IPlaceholders.ts#L5)*

@@ -1,4 +1,6 @@
 # Changelog of DebugIO
+## 1.3.0
+* New functions: `timeEnd` and `time`
 ## 1.2.0
 * New options: `customContext`
 * Internal refactoring.

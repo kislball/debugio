@@ -6,7 +6,7 @@
 > Enjoy simplicity and flexibility
 
 DebugIO is super simple. It is built on principle of recivers, who do all the stuff about sending logs somewhere.  
-DebugIO is super lightweight. It is just 227 lines of code.
+DebugIO is super lightweight. It is just 254 lines of code.
 ## Getting started
 ### Simple logging
 Let's start with a simple console logging:

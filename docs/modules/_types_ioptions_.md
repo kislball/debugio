@@ -18,4 +18,4 @@
 
 • **LogReciver**: *any*
 
-*Defined in [types/IOptions.ts:2](https://github.com/kislball/debugio/blob/4e218af/src/types/IOptions.ts#L2)*
+*Defined in [types/IOptions.ts:2](https://github.com/kislball/debugio/blob/ab967a2/src/types/IOptions.ts#L2)*

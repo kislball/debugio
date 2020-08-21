@@ -14,7 +14,7 @@
 
 Ƭ **TemplateEngine**: *function*
 
-*Defined in [types/TemplateEngine.ts:1](https://github.com/kislball/debugio/blob/4e218af/src/types/TemplateEngine.ts#L1)*
+*Defined in [types/TemplateEngine.ts:1](https://github.com/kislball/debugio/blob/ab967a2/src/types/TemplateEngine.ts#L1)*
 
 #### Type declaration:
 
