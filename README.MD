@@ -50,6 +50,9 @@ test2.use(DebugIO.recivers.Console);
 test2.log("inheritance test"); // [test][test2][log] inheritance test
 ```
 As you see, we can add "sub-namespace" to existing namespace.
+### Benchmarking
+DebugIO has built-in method for benchmarking anything.
+
 ## Flexing the DebugIO
 All possible options can be set up as static properties in `DebugIO` class.
 ### Placeholders
