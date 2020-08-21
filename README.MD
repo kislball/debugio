@@ -6,7 +6,7 @@
 > Enjoy simplicity and flexibility
 
 DebugIO is super simple. It is built on principle of recivers, who do all the stuff about sending logs somewhere.  
-DebugIO is super lightweight. It is just 254 lines of code.
+DebugIO is super lightweight. It is just 256 lines of code.
 ## Getting started
 ### Simple logging
 Let's start with a simple console logging:
@@ -50,6 +50,7 @@ test2.use(DebugIO.recivers.Console);
 test2.log("inheritance test"); // [test][test2][log] inheritance test
 ```
 As you see, we can add "sub-namespace" to existing namespace.
+Also, if a logger has a parent, we may not pass namespace, it will be omitted
 ### Benchmarking
 DebugIO has built-in method for benchmarking anything.
 ```js
