@@ -52,7 +52,16 @@ test2.log("inheritance test"); // [test][test2][log] inheritance test
 As you see, we can add "sub-namespace" to existing namespace.
 ### Benchmarking
 DebugIO has built-in method for benchmarking anything.
-
+```js
+const test = new DebugIO({
+  namespace: "test"
+});
+test.use(DebugIO.recivers.Console);
+test.time("my super bench"); // create a label, which starts counting time since function execution
+setTimeout(() => {
+  test.timeEnd("my super bench"); // stop the label and output result with time placeholder
+}, 1000);
+```
 ## Flexing the DebugIO
 All possible options can be set up as static properties in `DebugIO` class.
 ### Placeholders
@@ -66,6 +75,8 @@ All place holders support the power of Handlebars
   * namespaces - namespaces chain built from `namespace` placeholder
   * logType - logType from `logType` placeholder
   * pretty - messages put into function joined by `DebugIO.separator`
+* `DebugIO.placeholders.time` - default value is  `{{label}}: {{time}}ms`.
+Used in `time` and `timeEnd` functions(see [benchmarking](#benchmarking)). Variables: `time` and `label`.
 
 ### Providing custom template enigne
 You can use your own template engine by providing `DebugIO.render` function. It'll accept those params: `str` - string to render; `ctx` - data to render. Default function:
