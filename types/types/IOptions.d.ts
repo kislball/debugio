@@ -8,7 +8,7 @@ export interface IOptions {
     /**
      * namespace
      */
-    namespace: string;
+    namespace?: string;
     /**
      * recivers to pass
      */

@@ -73,10 +73,10 @@ class DebugIO {
    * @param options {IOptions} options
    */
   constructor(options: IOptions) {
-    if(!options.namespace) throw new TypeError("no namespace provided");
-    if(DebugIO._createdNamespaces.includes(options.namespace)) throw new RangeError(`namespace ${options.namespace} has been already declared`);
+    if(!options.namespace && !options.parent) throw new TypeError("no namespace provided");
+    if(!options.parent && DebugIO._createdNamespaces.includes(options.namespace ?? "")) throw new RangeError(`namespace ${options.namespace} has been already declared`);
     this.options = options;
-    this.namespace = options.namespace;
+    this.namespace = options.namespace ?? "";
 
     DebugIO._createdNamespaces.push(this.namespace);
 
@@ -179,8 +179,10 @@ class DebugIO {
       logType: DebugIO.render(DebugIO.placeholders.logType, {rawLogType: logType})   
     };
 
-    const namespaceNames = this.parents.map(e => e.namespace);
-    namespaceNames.push(this.namespace);
+    const namespaceNames = this.parents.map(e => e.namespace).filter(e => e.length > 0);
+    if(this.namespace.length > 0) {
+      namespaceNames.push(this.namespace);
+    }
 
     const namespaces: string = namespaceNames.map(e => DebugIO.render(DebugIO.placeholders.namespace, {namespace: e})).join("");
     final.namespaces = namespaces;

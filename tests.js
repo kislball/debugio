@@ -48,3 +48,18 @@ test5.time("my timestamp");
 setTimeout(() => {
   test5.timeEnd("my timestamp");
 }, 1000);
+
+// unoptional namespacing
+let test6 = new DebugIO({namespace: "test6"});
+let test7 = new DebugIO({parent: test6});
+
+test7.use(DebugIO.recivers.Console);
+
+test7.log("test");
+
+// unoptional namespacing requires a parent
+let test9 = new DebugIO();
+
+test9.use(DebugIO.recivers.Console);
+
+test9.log("test");
