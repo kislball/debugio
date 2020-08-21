@@ -45,7 +45,8 @@ class DebugIO {
   public static placeholders: IPlaceholders = {
     main: "{{ prefix }}{{ namespaces }}{{ logType }} {{ pretty }}",
     logType: "[{{ rawLogType }}]",
-    namespace: "[{{ namespace }}]"
+    namespace: "[{{ namespace }}]",
+    time: "{{label}}: {{time}}ms"
   }; 
   /**
    * separator which messages are joined with
@@ -154,7 +155,10 @@ class DebugIO {
   timeEnd(label: string, logType: LogType = "log"): void {
     const time = this.timestamps.get(label);
     if(time == undefined) throw new TypeError(`cannot find ${label} time counter`);
-    this._invoke(logType, `${label}: ${new Date().getTime() - time.getTime()}ms`);
+    this._invoke(logType, template(DebugIO.placeholders.time, Object.assign({
+      time: new Date().getTime() - time.getTime(),
+      label
+    }, this.options.customContext ?? {})));
   }
 
   /**
