@@ -72,7 +72,7 @@ class DebugIO {
    * 
    * @param options {IOptions} options
    */
-  constructor(options: IOptions) {
+  constructor(options: IOptions = {}) {
     if(!options.namespace && !options.parent) throw new TypeError("no namespace provided");
     if(!options.parent && DebugIO._createdNamespaces.includes(options.namespace ?? "")) throw new RangeError(`namespace ${options.namespace} has been already declared`);
     this.options = options;
