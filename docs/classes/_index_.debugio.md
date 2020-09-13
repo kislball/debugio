@@ -30,6 +30,7 @@
 * [_invoke](_index_.debugio.md#private-_invoke)
 * [_pretty](_index_.debugio.md#private-_pretty)
 * [error](_index_.debugio.md#error)
+* [extend](_index_.debugio.md#extend)
 * [log](_index_.debugio.md#log)
 * [time](_index_.debugio.md#time)
 * [timeEnd](_index_.debugio.md#timeend)
@@ -47,7 +48,7 @@
 
 \+ **new DebugIO**(`options`: [IOptions](../interfaces/_types_ioptions_.ioptions.md)): *[DebugIO](_index_.debugio.md)*
 
-*Defined in [index.ts:69](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L69)*
+*Defined in [index.ts:69](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L69)*
 
 **Parameters:**
 
@@ -63,7 +64,7 @@ Name | Type | Default | Description |
 
 • **children**: *[DebugIO](_index_.debugio.md)[]* = []
 
-*Defined in [index.ts:25](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L25)*
+*Defined in [index.ts:25](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L25)*
 
 children of the instance
 
@@ -73,7 +74,7 @@ ___
 
 • **namespace**: *string*
 
-*Defined in [index.ts:20](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L20)*
+*Defined in [index.ts:20](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L20)*
 
 namespace
 
@@ -83,7 +84,7 @@ ___
 
 • **options**: *[IOptions](../interfaces/_types_ioptions_.ioptions.md)*
 
-*Defined in [index.ts:16](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L16)*
+*Defined in [index.ts:16](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L16)*
 
 options
 
@@ -93,7 +94,7 @@ ___
 
 • **parents**: *[DebugIO](_index_.debugio.md)[]* = []
 
-*Defined in [index.ts:30](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L30)*
+*Defined in [index.ts:30](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L30)*
 
 parents of the instance
 
@@ -103,7 +104,7 @@ ___
 
 • **recivers**: *[LogReciver](../modules/_types_logreciver_.md#export-assignment-logreciver)[]* = []
 
-*Defined in [index.ts:35](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L35)*
+*Defined in [index.ts:35](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L35)*
 
 recivers of the instance
 
@@ -113,7 +114,7 @@ ___
 
 • **timestamps**: *Map‹string, Date›* = new Map()
 
-*Defined in [index.ts:69](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L69)*
+*Defined in [index.ts:69](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L69)*
 
 ___
 
@@ -121,7 +122,7 @@ ___
 
 ▪ **_createdNamespaces**: *string[]* = []
 
-*Defined in [index.ts:68](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L68)*
+*Defined in [index.ts:68](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L68)*
 
 ___
 
@@ -129,7 +130,7 @@ ___
 
 ▪ **prefix**: *string* = ""
 
-*Defined in [index.ts:40](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L40)*
+*Defined in [index.ts:40](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L40)*
 
 prefix variable in main placeholder
 
@@ -139,7 +140,7 @@ ___
 
 ▪ **render**: *[TemplateEngine](../modules/_types_templateengine_.md#export-assignment-templateengine)* = template
 
-*Defined in [index.ts:59](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L59)*
+*Defined in [index.ts:59](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L59)*
 
 render functions
 
@@ -149,7 +150,7 @@ ___
 
 ▪ **separator**: *string* = ", "
 
-*Defined in [index.ts:54](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L54)*
+*Defined in [index.ts:54](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L54)*
 
 separator which messages are joined with
 
@@ -159,7 +160,7 @@ separator which messages are joined with
 
 ▸ **_invoke**(`logType`: [LogType](../modules/_types_logtype_.md#export-assignment-logtype), ...`messages`: any[]): *void*
 
-*Defined in [index.ts:107](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L107)*
+*Defined in [index.ts:107](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L107)*
 
 **Parameters:**
 
@@ -176,7 +177,7 @@ ___
 
 ▸ **_pretty**(`logType`: [LogType](../modules/_types_logtype_.md#export-assignment-logtype), ...`messages`: any[]): *string*
 
-*Defined in [index.ts:173](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L173)*
+*Defined in [index.ts:173](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L173)*
 
 **Parameters:**
 
@@ -193,7 +194,7 @@ ___
 
 ▸ **error**(...`messages`: any[]): *void*
 
-*Defined in [index.ts:127](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L127)*
+*Defined in [index.ts:127](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L127)*
 
 post an error
 
@@ -207,11 +208,27 @@ Name | Type | Description |
 
 ___
 
+###  extend
+
+▸ **extend**(`options`: [IOptions](../interfaces/_types_ioptions_.ioptions.md)): *[DebugIO](_index_.debugio.md)‹›*
+
+*Defined in [index.ts:193](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L193)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`options` | [IOptions](../interfaces/_types_ioptions_.ioptions.md) |
+
+**Returns:** *[DebugIO](_index_.debugio.md)‹›*
+
+___
+
 ###  log
 
 ▸ **log**(...`messages`: any[]): *void*
 
-*Defined in [index.ts:118](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L118)*
+*Defined in [index.ts:118](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L118)*
 
 post a log
 
@@ -229,7 +246,7 @@ ___
 
 ▸ **time**(`label`: string): *void*
 
-*Defined in [index.ts:145](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L145)*
+*Defined in [index.ts:145](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L145)*
 
 start timestamp
 
@@ -247,7 +264,7 @@ ___
 
 ▸ **timeEnd**(`label`: string, `logType`: [LogType](../modules/_types_logtype_.md#export-assignment-logtype)): *void*
 
-*Defined in [index.ts:155](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L155)*
+*Defined in [index.ts:155](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L155)*
 
 stop timestamp
 
@@ -266,7 +283,7 @@ ___
 
 ▸ **use**(`reciver`: [LogReciver](../modules/_types_logreciver_.md#export-assignment-logreciver)): *void*
 
-*Defined in [index.ts:169](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L169)*
+*Defined in [index.ts:169](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L169)*
 
 use a reciver for the instance
 
@@ -284,7 +301,7 @@ ___
 
 ▸ **warn**(...`messages`: any[]): *void*
 
-*Defined in [index.ts:136](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L136)*
+*Defined in [index.ts:136](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L136)*
 
 post a warning
 
@@ -302,7 +319,7 @@ Name | Type | Description |
 
 ### ▪ **placeholders**: *object*
 
-*Defined in [index.ts:45](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L45)*
+*Defined in [index.ts:45](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L45)*
 
 placeholders of the instance
 
@@ -310,25 +327,25 @@ placeholders of the instance
 
 • **logType**: *string* = "[{{ rawLogType }}]"
 
-*Defined in [index.ts:47](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L47)*
+*Defined in [index.ts:47](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L47)*
 
 ###  main
 
 • **main**: *string* = "{{ prefix }}{{ namespaces }}{{ logType }} {{ pretty }}"
 
-*Defined in [index.ts:46](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L46)*
+*Defined in [index.ts:46](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L46)*
 
 ###  namespace
 
 • **namespace**: *string* = "[{{ namespace }}]"
 
-*Defined in [index.ts:48](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L48)*
+*Defined in [index.ts:48](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L48)*
 
 ###  time
 
 • **time**: *string* = "{{label}}: {{time}}ms"
 
-*Defined in [index.ts:49](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L49)*
+*Defined in [index.ts:49](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L49)*
 
 ___
 
@@ -336,7 +353,7 @@ ___
 
 ### ▪ **recivers**: *object*
 
-*Defined in [index.ts:64](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L64)*
+*Defined in [index.ts:64](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L64)*
 
 standart recievers
 
@@ -344,4 +361,4 @@ standart recievers
 
 • **Console**: *(Anonymous function)*
 
-*Defined in [index.ts:65](https://github.com/kislball/debugio/blob/9a1c73e/src/index.ts#L65)*
+*Defined in [index.ts:65](https://github.com/kislball/debugio/blob/582b93c/src/index.ts#L65)*

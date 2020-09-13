@@ -1,4 +1,6 @@
 # Changelog of DebugIO
+## 1.4.0
+* `extend` function for DebugIO instances
 ## 1.3.0
 * New functions: `timeEnd` and `time`
 ### 1.3.1

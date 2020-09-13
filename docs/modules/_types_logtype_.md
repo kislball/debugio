@@ -14,4 +14,4 @@
 
 Ƭ **LogType**: *"error" | "log" | "warn"*
 
-*Defined in [types/LogType.ts:1](https://github.com/kislball/debugio/blob/9a1c73e/src/types/LogType.ts#L1)*
+*Defined in [types/LogType.ts:1](https://github.com/kislball/debugio/blob/582b93c/src/types/LogType.ts#L1)*

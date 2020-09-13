@@ -21,7 +21,7 @@
 
 • **logType**: *string*
 
-*Defined in [types/IPrettyContext.ts:6](https://github.com/kislball/debugio/blob/9a1c73e/src/types/IPrettyContext.ts#L6)*
+*Defined in [types/IPrettyContext.ts:6](https://github.com/kislball/debugio/blob/582b93c/src/types/IPrettyContext.ts#L6)*
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **namespaces**: *string*
 
-*Defined in [types/IPrettyContext.ts:5](https://github.com/kislball/debugio/blob/9a1c73e/src/types/IPrettyContext.ts#L5)*
+*Defined in [types/IPrettyContext.ts:5](https://github.com/kislball/debugio/blob/582b93c/src/types/IPrettyContext.ts#L5)*
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **prefix**: *string*
 
-*Defined in [types/IPrettyContext.ts:4](https://github.com/kislball/debugio/blob/9a1c73e/src/types/IPrettyContext.ts#L4)*
+*Defined in [types/IPrettyContext.ts:4](https://github.com/kislball/debugio/blob/582b93c/src/types/IPrettyContext.ts#L4)*
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 • **pretty**: *string*
 
-*Defined in [types/IPrettyContext.ts:7](https://github.com/kislball/debugio/blob/9a1c73e/src/types/IPrettyContext.ts#L7)*
+*Defined in [types/IPrettyContext.ts:7](https://github.com/kislball/debugio/blob/582b93c/src/types/IPrettyContext.ts#L7)*
