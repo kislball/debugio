@@ -58,7 +58,7 @@ declare class DebugIO {
      *
      * @param options {IOptions} options
      */
-    constructor(options: IOptions);
+    constructor(options?: IOptions);
     private _invoke;
     /**
      * post a log
@@ -98,5 +98,6 @@ declare class DebugIO {
      */
     use(reciver: LogReciver): void;
     private _pretty;
+    extend(options: IOptions): DebugIO;
 }
 export = DebugIO;

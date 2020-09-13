@@ -58,8 +58,13 @@ test7.use(DebugIO.recivers.Console);
 test7.log("test");
 
 // unoptional namespacing requires a parent
-let test9 = new DebugIO();
+// let test9 = new DebugIO();
+//
+// test9.use(DebugIO.recivers.Console);
+//
+// test9.log("test");
 
-test9.use(DebugIO.recivers.Console);
-
-test9.log("test");
+let test10 = new DebugIO({namespace: "test10"});
+let test11 = test10.extend({namespace: "gay"});
+test11.use(DebugIO.recivers.Console);
+test11.log("test");

@@ -189,6 +189,10 @@ class DebugIO {
 
     return DebugIO.render(DebugIO.placeholders.main, Object.assign(final, this.options.customContext ?? {}));
   }
+
+  extend(options: IOptions) {
+    return new DebugIO(Object.assign(options, {parent: this}));
+  }
 }
 
 export = DebugIO;
