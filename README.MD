@@ -79,7 +79,7 @@ All place holders support the power of Handlebars
 * `DebugIO.placeholders.time` - default value is  `{{label}}: {{time}}ms`.
 Used in `time` and `timeEnd` functions(see [benchmarking](#benchmarking)). Variables: `time` and `label`.
 
-### Providing custom template enigne
+### Providing custom template engine
 You can use your own template engine by providing `DebugIO.render` function. It'll accept those params: `str` - string to render; `ctx` - data to render. Default function:
 ```ts
 import Handlebars from 'handlebars'
